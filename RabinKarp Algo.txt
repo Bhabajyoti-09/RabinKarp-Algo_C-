@@ -1,0 +1,18 @@
+{
+    public:
+        vector <int> search(string pat, string txt)
+        {
+            vector<int>v;
+            int n = txt.size();
+            int m = pat.size();
+            for(int i=0;i<n;i++)
+            {
+                if(pat == txt.substr(i,m))
+                v.push_back(i+1);
+            }
+            if(v.size()==0)
+            return {-1};
+            return v;
+        }
+     
+};
